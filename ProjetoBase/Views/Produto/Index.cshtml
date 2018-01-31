@@ -1,0 +1,20 @@
+﻿<div class="card text-center context-menu-one" ng-controller="ProdutoCtrl">
+    <div class="card-header">
+        Gerenciar Produto
+    </div>
+    <div class="card-body">
+        <div class="btn-group-sm" style="margin-bottom: 54px;">
+            <button type="button" class="btn btn-sm btn-primary" style="float: left;">
+                Cadastrar
+            </button>
+            <div class="btn-group-sm" style="float: right;">
+                <button type="button" class="btn btn-sm btn-warning">Editar</button>
+                <button type="button" class="btn btn-sm btn-danger">Remover</button>
+            </div>
+        </div>
+        <div ui-i18n="{{lang}}">
+            <div id="grid2" ui-grid="gridOptions" class="grid" ui-grid-auto-resize ui-grid-move-columns ui-grid-selection ui-grid-edit ui-grid-cellNav></div>
+        </div>
+    </div>
+    <div class="card-footer text-muted"></div>
+</div>

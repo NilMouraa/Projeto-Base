@@ -1,0 +1,40 @@
+﻿@using WebHelpers.Mvc5
+<aside class="main-sidebar">
+    <section class="sidebar">
+        @* BEGIN Search *@
+        @*<form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Procurar...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>*@
+        @* END Search *@
+        @* BEGIN Menu *@
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MENU</li>
+            <li class="@Url.IsLinkActive("Index", "Home")">
+                <a href="@Url.Action("Index", "Home")"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+            </li>
+            <li class="treeview @Url.IsLinkActive("Index", "Produto") @Url.IsLinkActive("Index", "Cliente")">
+                <a href="#">
+                    <i class="fa fa-tasks"></i> <span>Gerenciar</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@Url.IsLinkActive("Index", "Produto")"><a href="@Url.Action("Index", "Produto")">Produto</a></li>
+                    <li class="@Url.IsLinkActive("Index", "Cliente")"><a href="@Url.Action("Index", "Cliente")">Cliente</a></li>
+                </ul>
+            </li>
+            <li class="@Url.IsLinkActive("Index", "Sobre")">
+                <a href="@Url.Action("Index", "Sobre")"><i class="fa fa-info"></i> <span>Sobre</span></a>
+            </li>
+        </ul>
+        @* END Menu *@
+    </section>
+</aside>
